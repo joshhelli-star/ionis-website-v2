@@ -985,12 +985,15 @@
       }
 
       .nav-links.open .dropdown-menu {
-        display: block;
+        display: none;
         position: static;
         box-shadow: none;
         border: none;
         padding: 0.3rem 0 0 1rem;
         min-width: auto;
+      }
+      .nav-links.open .nav-dropdown.open .dropdown-menu {
+        display: block;
       }
 
       .hero { padding: 4rem 1.5rem 3.5rem; }
@@ -1034,6 +1037,7 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
         <li class="nav-dropdown">
           <a href="/services/">Services</a>
           <ul class="dropdown-menu">
@@ -1208,8 +1212,8 @@
           <div class="tools-category stagger-item">
             <p class="tools-category-label">Development and design</p>
             <ul class="tools-list">
-              <li><img src="" alt="HTML5 logo" width="16" height="16">Clean HTML</li>
-              <li><img src="" alt="Figma logo" width="16" height="16">Figma</li>
+              <li>Clean HTML</li>
+              <li>Figma</li>
               <li>Server-side rendering</li>
             </ul>
           </div>
@@ -1217,17 +1221,17 @@
           <div class="tools-category stagger-item">
             <p class="tools-category-label">AI and content</p>
             <ul class="tools-list">
-              <li><img src="" alt="Claude logo" width="16" height="16">Claude</li>
-              <li><img src="" alt="OpenAI logo" width="16" height="16">OpenAI GPT-4</li>
+              <li>Claude</li>
+              <li>OpenAI GPT-4</li>
             </ul>
           </div>
 
           <div class="tools-category stagger-item">
             <p class="tools-category-label">SEO analysis</p>
             <ul class="tools-list">
-              <li><img src="" alt="Ahrefs logo" width="16" height="16">Ahrefs</li>
-              <li><img src="" alt="SEMrush logo" width="16" height="16">SEMrush</li>
-              <li><img src="" alt="Google Search Console logo" width="16" height="16">Google Search Console</li>
+              <li>Ahrefs</li>
+              <li>SEMrush</li>
+              <li>Google Search Console</li>
             </ul>
           </div>
 
@@ -1344,6 +1348,17 @@
       var toggle = document.querySelector('.nav-toggle');
       var navLinks = document.getElementById('nav-links');
       if (!toggle || !navLinks) return;
+
+      // Mobile Services dropdown toggle
+      navLinks.querySelectorAll('.nav-dropdown > a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            var parent = this.closest('.nav-dropdown');
+            parent.classList.toggle('open');
+          }
+        });
+      });
 
       toggle.addEventListener('click', function () {
         var isOpen = this.getAttribute('aria-expanded') === 'true';

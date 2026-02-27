@@ -992,12 +992,15 @@
       }
 
       .nav-links.open .dropdown-menu {
-        display: block;
+        display: none;
         position: static;
         box-shadow: none;
         border: none;
         padding: 0.3rem 0 0 1rem;
         min-width: auto;
+      }
+      .nav-links.open .nav-dropdown.open .dropdown-menu {
+        display: block;
       }
 
       .hero { padding: 4rem 1.5rem 3.5rem; }
@@ -1040,6 +1043,7 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
         <li class="nav-dropdown">
           <a href="/services/">Services</a>
           <ul class="dropdown-menu">
@@ -1234,48 +1238,48 @@
           <div class="tools-category stagger-item">
             <p class="tools-category-label">CRM</p>
             <ul class="tools-list">
-              <li><img src="" alt="HubSpot logo" width="16" height="16">HubSpot</li>
-              <li><img src="" alt="GoHighLevel logo" width="16" height="16">GoHighLevel</li>
-              <li><img src="" alt="Pipedrive logo" width="16" height="16">Pipedrive</li>
-              <li><img src="" alt="Salesforce logo" width="16" height="16">Salesforce</li>
-              <li><img src="" alt="Close logo" width="16" height="16">Close</li>
-              <li><img src="" alt="Zoho logo" width="16" height="16">Zoho</li>
+              <li>HubSpot</li>
+              <li>GoHighLevel</li>
+              <li>Pipedrive</li>
+              <li>Salesforce</li>
+              <li>Close</li>
+              <li>Zoho</li>
             </ul>
           </div>
 
           <div class="tools-category stagger-item">
             <p class="tools-category-label">Calendar and booking</p>
             <ul class="tools-list">
-              <li><img src="" alt="Cal.com logo" width="16" height="16">Cal.com</li>
-              <li><img src="" alt="Calendly logo" width="16" height="16">Calendly</li>
-              <li><img src="" alt="Google Calendar logo" width="16" height="16">Google Calendar</li>
-              <li><img src="" alt="Microsoft Outlook logo" width="16" height="16">Microsoft Outlook</li>
+              <li>Cal.com</li>
+              <li>Calendly</li>
+              <li>Google Calendar</li>
+              <li>Microsoft Outlook</li>
             </ul>
           </div>
 
           <div class="tools-category stagger-item">
             <p class="tools-category-label">Forms and chat</p>
             <ul class="tools-list">
-              <li><img src="" alt="Typeform logo" width="16" height="16">Typeform</li>
-              <li><img src="" alt="Tally logo" width="16" height="16">Tally</li>
-              <li><img src="" alt="Website chat widgets logo" width="16" height="16">Website chat widgets</li>
-              <li><img src="" alt="Email logo" width="16" height="16">Email</li>
+              <li>Typeform</li>
+              <li>Tally</li>
+              <li>Website chat widgets</li>
+              <li>Email</li>
             </ul>
           </div>
 
           <div class="tools-category stagger-item">
             <p class="tools-category-label">Automation</p>
             <ul class="tools-list">
-              <li><img src="" alt="Make.com logo" width="16" height="16">Make.com</li>
-              <li><img src="" alt="n8n logo" width="16" height="16">n8n</li>
-              <li><img src="" alt="Zapier logo" width="16" height="16">Zapier</li>
+              <li>Make.com</li>
+              <li>n8n</li>
+              <li>Zapier</li>
             </ul>
           </div>
 
           <div class="tools-category stagger-item">
             <p class="tools-category-label">AI</p>
             <ul class="tools-list">
-              <li><img src="" alt="OpenAI API logo" width="16" height="16">OpenAI API for conversation handling where required</li>
+              <li>OpenAI API for conversation handling where required</li>
             </ul>
           </div>
 
@@ -1385,6 +1389,17 @@
       var toggle = document.querySelector('.nav-toggle');
       var navLinks = document.getElementById('nav-links');
       if (!toggle || !navLinks) return;
+
+      // Mobile Services dropdown toggle
+      navLinks.querySelectorAll('.nav-dropdown > a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            var parent = this.closest('.nav-dropdown');
+            parent.classList.toggle('open');
+          }
+        });
+      });
 
       toggle.addEventListener('click', function () {
         var isOpen = this.getAttribute('aria-expanded') === 'true';

@@ -174,9 +174,12 @@
       font-size: 0.85rem;
       font-weight: 500;
       color: var(--text-tertiary);
-      text-decoration: none;
+      background: none;
+      border: none;
       border-bottom: 2px solid transparent;
       white-space: nowrap;
+      cursor: pointer;
+      font-family: var(--font-sans);
       transition: color 0.2s, border-color 0.2s;
     }
 
@@ -454,7 +457,8 @@
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
       .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fafaf8; border-bottom: 1px solid rgba(0, 102, 255, 0.08); padding: 1rem 1.5rem 1.5rem; gap: 0.75rem; z-index: 999; box-shadow: 0 8px 24px rgba(166, 171, 189, 0.25); }
-      .nav-links.open .dropdown-menu { display: block; position: static; box-shadow: none; border: none; padding: 0.3rem 0 0 1rem; min-width: auto; }
+      .nav-links.open .dropdown-menu { display: none; position: static; box-shadow: none; border: none; padding: 0.3rem 0 0 1rem; min-width: auto; }
+      .nav-links.open .nav-dropdown.open .dropdown-menu { display: block; }
 
       .page-hero { padding: 3rem 1.2rem 2.5rem; }
       .filter-bar { padding: 0 1.2rem; }
@@ -485,6 +489,7 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
         <li class="nav-dropdown">
           <a href="/services/">Services</a>
           <ul class="dropdown-menu">
@@ -527,12 +532,12 @@
     <!-- ── FILTER BAR ── -->
     <div class="filter-bar" role="navigation" aria-label="Filter posts by category">
       <div class="filter-bar-inner">
-        <a href="/blog/" class="filter-btn active">All posts</a>
-        <a href="#" class="filter-btn">Cold Email</a>
-        <a href="#" class="filter-btn">AI Automation</a>
-        <a href="#" class="filter-btn">Lead Generation</a>
-        <a href="#" class="filter-btn">CRM</a>
-        <a href="#" class="filter-btn">Business Automation</a>
+        <button class="filter-btn active" data-filter="all">All posts</button>
+        <button class="filter-btn" data-filter="Cold Email">Cold Email</button>
+        <button class="filter-btn" data-filter="AI Automation">AI Automation</button>
+        <button class="filter-btn" data-filter="Lead Generation">Lead Generation</button>
+        <button class="filter-btn" data-filter="CRM Automation">CRM</button>
+        <button class="filter-btn" data-filter="Business Automation">Business Automation</button>
       </div>
     </div>
 
@@ -542,7 +547,7 @@
         <div class="blog-grid">
 
           <!-- Featured post -->
-          <a href="/blog/why-cold-email-goes-to-spam/" class="post-card-featured" aria-label="Read: Why Your Cold Email Is Going to Spam (And How to Fix It)">
+          <a href="/blog/why-cold-email-goes-to-spam/" class="post-card-featured" data-category="Cold Email" aria-label="Read: Why Your Cold Email Is Going to Spam (And How to Fix It)">
             <div class="post-card-featured-content">
               <span class="featured-label">Featured</span>
               <div class="post-meta-row">
@@ -569,7 +574,7 @@
           </a>
 
           <!-- Post 2 -->
-          <a href="/blog/what-is-ai-automation-b2b/" class="post-card" aria-label="Read: What Is AI Automation and What Can It Actually Do for a B2B Business?">
+          <a href="/blog/what-is-ai-automation-b2b/" class="post-card" data-category="AI Automation" aria-label="Read: What Is AI Automation and What Can It Actually Do for a B2B Business?">
             <span class="post-card-category">AI Automation</span>
             <h3>What Is AI Automation and What Can It Actually Do for a B2B Business?</h3>
             <p>AI automation explained without the hype. What it actually is, what it can do right now, and where to start.</p>
@@ -580,7 +585,7 @@
           </a>
 
           <!-- Post 3 -->
-          <a href="/blog/b2b-lead-generation-system/" class="post-card" aria-label="Read: How to Build a B2B Lead Generation System That Books Qualified Meetings">
+          <a href="/blog/b2b-lead-generation-system/" class="post-card" data-category="Lead Generation" aria-label="Read: How to Build a B2B Lead Generation System That Books Qualified Meetings">
             <span class="post-card-category">Lead Generation</span>
             <h3>How to Build a B2B Lead Generation System That Books Qualified Meetings</h3>
             <p>A practical guide to building a lead generation system that produces qualified meetings rather than just activity.</p>
@@ -591,7 +596,7 @@
           </a>
 
           <!-- Post 4 -->
-          <a href="/blog/crm-data-mess-automation/" class="post-card" aria-label="Read: The Real Reason Your CRM Data Is a Mess (And How Automation Fixes It)">
+          <a href="/blog/crm-data-mess-automation/" class="post-card" data-category="CRM Automation" aria-label="Read: The Real Reason Your CRM Data Is a Mess (And How Automation Fixes It)">
             <span class="post-card-category">CRM Automation</span>
             <h3>The Real Reason Your CRM Data Is a Mess (And How Automation Fixes It)</h3>
             <p>Messy CRM data is almost never a discipline problem. It is a process problem. Here is why it happens and how automation fixes it at the root.</p>
@@ -602,7 +607,7 @@
           </a>
 
           <!-- Post 5 -->
-          <a href="/blog/cut-hours-of-admin/" class="post-card" aria-label="Read: How B2B Businesses Are Using AI to Cut Hours of Admin Every Week">
+          <a href="/blog/cut-hours-of-admin/" class="post-card" data-category="Business Automation" aria-label="Read: How B2B Businesses Are Using AI to Cut Hours of Admin Every Week">
             <span class="post-card-category">Business Automation</span>
             <h3>How B2B Businesses Are Using AI to Cut Hours of Admin Every Week</h3>
             <p>Admin is one of the biggest hidden costs in a B2B business. Here is how AI automation is eliminating the most common time-wasting processes.</p>
@@ -667,10 +672,42 @@
   </footer>
 
   <script>
+    // Blog category filter
+    (function () {
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var cards = document.querySelectorAll('[data-category]');
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var filter = btn.getAttribute('data-filter');
+          cards.forEach(function (card) {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    }());
+  </script>
+
+  <script>
     (function () {
       var toggle = document.querySelector('.nav-toggle');
       var navLinks = document.getElementById('nav-links');
       if (!toggle || !navLinks) return;
+      // Mobile Services dropdown toggle
+      navLinks.querySelectorAll('.nav-dropdown > a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            var parent = this.closest('.nav-dropdown');
+            parent.classList.toggle('open');
+          }
+        });
+      });
       toggle.addEventListener('click', function () {
         var isOpen = this.getAttribute('aria-expanded') === 'true';
         this.setAttribute('aria-expanded', String(!isOpen));
