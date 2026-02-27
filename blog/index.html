@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — AI Automation, Cold Email & B2B Growth | Ionis AI</title>
+  <meta name="description" content="Practical guides on AI automation, cold email, lead generation, and CRM for B2B businesses. No hype — just what actually works.">
+  <link rel="canonical" href="https://ionisai.com/blog/" />
+
+  <meta property="og:title" content="Blog — AI Automation, Cold Email & B2B Growth | Ionis AI" />
+  <meta property="og:description" content="Practical guides on AI automation, cold email, lead generation, and CRM for B2B businesses. No hype — just what actually works." />
+  <meta property="og:url" content="https://ionisai.com/blog/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ionis AI" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog — AI Automation, Cold Email & B2B Growth | Ionis AI" />
+  <meta name="twitter:description" content="Practical guides on AI automation, cold email, lead generation, and CRM for B2B businesses. No hype — just what actually works." />
+
+  <!-- Schema: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Ionis AI Blog",
+    "description": "Practical guides on AI automation, cold email, lead generation, and CRM for B2B businesses.",
+    "url": "https://ionisai.com/blog/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ionis AI",
+      "url": "https://ionisai.com"
+    }
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ionisai.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://ionisai.com/blog/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --accent-primary: #0066ff;
+      --accent-secondary: #00d9ff;
+      --text-primary: #0d0a06;
+      --text-secondary: #524a3f;
+      --text-tertiary: #8b7f77;
+      --border: rgba(0, 0, 0, 0.08);
+      --bg: #ffffff;
+      --bg-page: #f5f4f1;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Courier New', monospace;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── Navigation ── */
+    .site-nav {
+      position: fixed; top: 0; width: 100%;
+      background: rgba(250, 250, 248, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.08);
+      z-index: 1000; padding: 1rem 2rem;
+    }
+    .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); letter-spacing: 2px; text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent-primary); }
+    .nav-links a[aria-current="page"] { color: var(--accent-primary); }
+    .nav-dropdown { position: relative; padding-bottom: 4px; margin-bottom: -4px; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 0.25rem; cursor: pointer; }
+    .nav-dropdown > a::after { content: '▾'; font-size: 0.65rem; opacity: 0.6; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: -0.75rem; background: rgba(250, 250, 248, 0.98); border: 1px solid rgba(0, 102, 255, 0.12); border-top: 2px solid var(--accent-primary); border-radius: 0 0 14px 14px; padding: 0.4rem 0 0.6rem; min-width: 260px; box-shadow: 0 16px 40px rgba(13, 10, 6, 0.1); z-index: 1001; }
+    .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu { display: block; }
+    .dropdown-menu li { list-style: none; }
+    .dropdown-menu a { display: block; padding: 0.55rem 1.2rem; font-size: 0.875rem; color: var(--text-secondary) !important; transition: color 0.2s, background 0.2s; }
+    .dropdown-menu a:hover { color: var(--accent-primary) !important; background: rgba(0, 102, 255, 0.04); }
+    .nav-cta { background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); color: white !important; padding: 0.6rem 1.3rem; border-radius: 8px; font-weight: 600 !important; font-size: 0.875rem !important; box-shadow: 0 4px 16px rgba(0, 102, 255, 0.25); transition: transform 0.2s, box-shadow 0.2s !important; white-space: nowrap; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 102, 255, 0.35) !important; color: white !important; }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all 0.3s; }
+
+    /* ── Page wrapper ── */
+    .page-wrapper { margin-top: 62px; }
+
+    /* ── Page hero ── */
+    .page-hero {
+      background: var(--bg);
+      padding: 4rem 2rem 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .breadcrumb a { color: var(--text-tertiary); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent-primary); }
+    .breadcrumb-sep { opacity: 0.5; }
+
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* ── Filter bar ── */
+    .filter-bar {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+
+    .filter-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.25rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .filter-bar-inner::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      display: inline-block;
+      padding: 0.9rem 1.1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .filter-btn:hover { color: var(--text-primary); }
+    .filter-btn.active { color: var(--accent-primary); border-bottom-color: var(--accent-primary); font-weight: 600; }
+
+    /* ── Blog grid ── */
+    .blog-grid-section {
+      padding: 3rem 2rem 5rem;
+    }
+
+    .blog-grid-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* Featured post — spans full width */
+    .post-card-featured {
+      grid-column: 1 / -1;
+      background: var(--bg);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .post-card-featured:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-primary);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .post-card-featured h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .post-card-featured p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .featured-visual {
+      background: linear-gradient(135deg, #060f2a 0%, #0a1840 50%, #0d2060 100%);
+      border-radius: 14px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .featured-visual-text {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 2;
+      letter-spacing: 0.5px;
+    }
+
+    .featured-visual-text span {
+      color: rgba(0, 217, 255, 0.7);
+    }
+
+    /* Standard post cards */
+    .post-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 1.8rem;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-card-category {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-primary);
+      background: rgba(0, 102, 255, 0.07);
+      padding: 0.25rem 0.7rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+    }
+
+    .post-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+      flex-grow: 1;
+    }
+
+    .post-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+    }
+
+    .post-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+
+    .post-card-read-more {
+      color: var(--accent-primary);
+      font-weight: 600;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .post-card-read-more::after {
+      content: '→';
+      transition: transform 0.2s;
+    }
+
+    .post-card:hover .post-card-read-more::after {
+      transform: translateX(3px);
+    }
+
+    /* Post meta shared */
+    .post-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      margin-bottom: 1.5rem;
+    }
+
+    .post-meta-sep {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--text-tertiary);
+      opacity: 0.4;
+      flex-shrink: 0;
+    }
+
+    /* ── Read more link on featured ── */
+    .read-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+
+    .read-more-link::after {
+      content: '→';
+      transition: transform 0.2s;
+    }
+
+    .post-card-featured:hover .read-more-link::after {
+      transform: translateX(4px);
+    }
+
+    /* ── CTA strip ── */
+    .cta-strip {
+      background: linear-gradient(160deg, #060f2a, #0a1840);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .cta-strip-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta-strip h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .cta-strip p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: white;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 16px rgba(0, 102, 255, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.4);
+    }
+
+    /* ── Footer ── */
+    footer { background: #f0ede8; border-top: 1px solid rgba(0, 102, 255, 0.06); padding-top: 4rem; }
+    .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 3.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+    .footer-logo { display: block; margin-bottom: 1rem; }
+    .footer-tagline { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.65; max-width: 320px; margin-bottom: 1.5rem; }
+    .footer-address { font-style: normal; color: var(--text-tertiary); font-size: 0.85rem; line-height: 1.8; }
+    .footer-address a { color: var(--accent-primary); text-decoration: none; }
+    .footer-address a:hover { text-decoration: underline; }
+    .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-tertiary); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col a { color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--accent-primary); }
+    .footer-bottom { border-top: 1px solid rgba(0, 102, 255, 0.06); padding: 1.2rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .footer-bottom p { color: var(--text-tertiary); font-size: 0.8rem; }
+
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+    @media (max-width: 1024px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .post-card-featured { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 768px) {
+      .site-nav { padding: 0.9rem 1.2rem; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fafaf8; border-bottom: 1px solid rgba(0, 102, 255, 0.08); padding: 1rem 1.5rem 1.5rem; gap: 0.75rem; z-index: 999; box-shadow: 0 8px 24px rgba(166, 171, 189, 0.25); }
+      .nav-links.open .dropdown-menu { display: block; position: static; box-shadow: none; border: none; padding: 0.3rem 0 0 1rem; min-width: auto; }
+
+      .page-hero { padding: 3rem 1.2rem 2.5rem; }
+      .filter-bar { padding: 0 1.2rem; }
+      .blog-grid-section { padding: 2rem 1.2rem 4rem; }
+
+      .post-card-featured {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .featured-visual { height: 180px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .footer-container { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-nav { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-nav { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="/" class="logo" aria-label="Ionis AI — home">IONIS AI</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-dropdown">
+          <a href="/services/">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="/services/cold-email-outreach/">Cold Email Outreach</a></li>
+            <li><a href="/services/inbound-lead-qualification/">Inbound Lead Qualification</a></li>
+            <li><a href="/services/crm-automation/">CRM Automation</a></li>
+            <li><a href="/services/marketing-intelligence/">Marketing Intelligence</a></li>
+            <li><a href="/services/custom-dashboards/">Custom Dashboards</a></li>
+            <li><a href="/services/business-process-automation/">Business Process Automation</a></li>
+            <li><a href="/services/content-automation/">Content Automation</a></li>
+            <li><a href="/services/financial-automation/">Financial Automation</a></li>
+            <li><a href="/services/bespoke-automation/">Bespoke AI Automation</a></li>
+            <li><a href="/services/seo-audits/">SEO Audits</a></li>
+            <li><a href="/services/website-design/">Website Design and Build</a></li>
+          </ul>
+        </li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/" aria-current="page">Blog</a></li>
+        <li><a href="https://cal.com/ionisai/discovery" class="nav-cta">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Blog</span>
+        </nav>
+        <h1>Practical guides for B2B businesses</h1>
+        <p>No hype. Just clear thinking on AI automation, cold email, lead generation, and running a leaner operation.</p>
+      </div>
+    </section>
+
+    <!-- ── FILTER BAR ── -->
+    <div class="filter-bar" role="navigation" aria-label="Filter posts by category">
+      <div class="filter-bar-inner">
+        <a href="/blog/" class="filter-btn active">All posts</a>
+        <a href="#" class="filter-btn">Cold Email</a>
+        <a href="#" class="filter-btn">AI Automation</a>
+        <a href="#" class="filter-btn">Lead Generation</a>
+        <a href="#" class="filter-btn">CRM</a>
+        <a href="#" class="filter-btn">Business Automation</a>
+      </div>
+    </div>
+
+    <!-- ── BLOG GRID ── -->
+    <section class="blog-grid-section">
+      <div class="blog-grid-inner">
+        <div class="blog-grid">
+
+          <!-- Featured post -->
+          <a href="/blog/why-cold-email-goes-to-spam/" class="post-card-featured" aria-label="Read: Why Your Cold Email Is Going to Spam (And How to Fix It)">
+            <div class="post-card-featured-content">
+              <span class="featured-label">Featured</span>
+              <div class="post-meta-row">
+                <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-primary);background:rgba(0,102,255,0.07);padding:0.25rem 0.7rem;border-radius:50px;">Cold Email</span>
+                <span class="post-meta-sep"></span>
+                <time datetime="2026-02-27">27 Feb 2026</time>
+                <span class="post-meta-sep"></span>
+                <span>7 min read</span>
+              </div>
+              <h2>Why Your Cold Email Is Going to Spam (And How to Fix It)</h2>
+              <p>Cold email landing in spam is almost always an infrastructure problem, not a copy problem. Here is what causes it and how to fix it properly.</p>
+              <span class="read-more-link">Read article</span>
+            </div>
+            <div class="featured-visual" aria-hidden="true">
+              <div class="featured-visual-text">
+                SPF ✓<br>
+                DKIM ✓<br>
+                DMARC ✓<br>
+                <span>Warm-up: day 18/28</span><br>
+                Bounce rate: <span>1.2%</span><br>
+                Inbox placement: <span>97%</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Post 2 -->
+          <a href="/blog/what-is-ai-automation-b2b/" class="post-card" aria-label="Read: What Is AI Automation and What Can It Actually Do for a B2B Business?">
+            <span class="post-card-category">AI Automation</span>
+            <h3>What Is AI Automation and What Can It Actually Do for a B2B Business?</h3>
+            <p>AI automation explained without the hype. What it actually is, what it can do right now, and where to start.</p>
+            <div class="post-card-meta">
+              <time datetime="2026-02-27">27 Feb 2026 · 7 min</time>
+              <span class="post-card-read-more">Read</span>
+            </div>
+          </a>
+
+          <!-- Post 3 -->
+          <a href="/blog/b2b-lead-generation-system/" class="post-card" aria-label="Read: How to Build a B2B Lead Generation System That Books Qualified Meetings">
+            <span class="post-card-category">Lead Generation</span>
+            <h3>How to Build a B2B Lead Generation System That Books Qualified Meetings</h3>
+            <p>A practical guide to building a lead generation system that produces qualified meetings rather than just activity.</p>
+            <div class="post-card-meta">
+              <time datetime="2026-02-27">27 Feb 2026 · 8 min</time>
+              <span class="post-card-read-more">Read</span>
+            </div>
+          </a>
+
+          <!-- Post 4 -->
+          <a href="/blog/crm-data-mess-automation/" class="post-card" aria-label="Read: The Real Reason Your CRM Data Is a Mess (And How Automation Fixes It)">
+            <span class="post-card-category">CRM Automation</span>
+            <h3>The Real Reason Your CRM Data Is a Mess (And How Automation Fixes It)</h3>
+            <p>Messy CRM data is almost never a discipline problem. It is a process problem. Here is why it happens and how automation fixes it at the root.</p>
+            <div class="post-card-meta">
+              <time datetime="2026-02-27">27 Feb 2026 · 7 min</time>
+              <span class="post-card-read-more">Read</span>
+            </div>
+          </a>
+
+          <!-- Post 5 -->
+          <a href="/blog/cut-hours-of-admin/" class="post-card" aria-label="Read: How B2B Businesses Are Using AI to Cut Hours of Admin Every Week">
+            <span class="post-card-category">Business Automation</span>
+            <h3>How B2B Businesses Are Using AI to Cut Hours of Admin Every Week</h3>
+            <p>Admin is one of the biggest hidden costs in a B2B business. Here is how AI automation is eliminating the most common time-wasting processes.</p>
+            <div class="post-card-meta">
+              <time datetime="2026-02-27">27 Feb 2026 · 7 min</time>
+              <span class="post-card-read-more">Read</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA STRIP ── -->
+    <section class="cta-strip">
+      <div class="cta-strip-inner">
+        <h2>Want to talk through what automation could do for your business?</h2>
+        <p>Book a call and we will walk through your processes, identify the highest-impact opportunities, and give you a clear picture of where to start.</p>
+        <a href="https://cal.com/ionisai/discovery" class="btn-primary">Book a Call</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="/" class="logo footer-logo" aria-label="Ionis AI — home">IONIS AI</a>
+        <p class="footer-tagline">Ionis AI is a UK-based AI automation agency helping B2B businesses worldwide generate more leads and run leaner operations.</p>
+        <address class="footer-address">
+          London, UK<br>
+          <a href="mailto:josh@ionisai.com">josh@ionisai.com</a>
+        </address>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/cold-email-outreach/">Cold Email Outreach</a></li>
+            <li><a href="/services/inbound-lead-qualification/">Inbound Lead Qualification</a></li>
+            <li><a href="/services/crm-automation/">CRM Automation</a></li>
+            <li><a href="/services/business-process-automation/">Business Process Automation</a></li>
+            <li><a href="/services/website-design/">Website Design and Build</a></li>
+            <li><a href="/services/bespoke-automation/">Bespoke AI Automation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="mailto:josh@ionisai.com">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ionis AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var navLinks = document.getElementById('nav-links');
+      if (!toggle || !navLinks) return;
+      toggle.addEventListener('click', function () {
+        var isOpen = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!isOpen));
+        navLinks.classList.toggle('open', !isOpen);
+      });
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          toggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('open');
+        });
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('nav')) {
+          toggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('open');
+        }
+      });
+    }());
+  </script>
+
+</body>
+</html>

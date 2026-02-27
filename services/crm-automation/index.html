@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI CRM Automation for B2B Sales Teams | HubSpot, Pipedrive, Salesforce | Ionis AI</title>
+  <meta name="description" content="Ionis AI automates CRM data enrichment, task creation, pipeline hygiene, and renewal alerts. Clean data, consistent follow-up, and accurate forecasting without the manual work.">
+  <link rel="canonical" href="https://ionisai.com/services/crm-automation/" />
+
+  <meta property="og:title" content="AI CRM Automation for B2B Sales Teams | HubSpot, Pipedrive, Salesforce | Ionis AI" />
+  <meta property="og:description" content="Ionis AI automates CRM data enrichment, task creation, pipeline hygiene, and renewal alerts. Clean data, consistent follow-up, and accurate forecasting without the manual work." />
+  <meta property="og:url" content="https://ionisai.com/services/crm-automation/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ionis AI" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI CRM Automation for B2B Sales Teams | HubSpot, Pipedrive, Salesforce | Ionis AI" />
+  <meta name="twitter:description" content="Ionis AI automates CRM data enrichment, task creation, pipeline hygiene, and renewal alerts. Clean data, consistent follow-up, and accurate forecasting without the manual work." />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI CRM Automation for B2B Revenue Teams",
+    "provider": {
+      "@type": "Organization",
+      "name": "Ionis AI",
+      "url": "https://ionisai.com"
+    },
+    "description": "Ionis AI automates CRM data enrichment, task creation, pipeline hygiene, and renewal alerts. Clean data, consistent follow-up, and accurate forecasting without the manual work.",
+    "areaServed": ["GB", "US"],
+    "url": "https://ionisai.com/services/crm-automation/"
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ionisai.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://ionisai.com/services/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "CRM Automation",
+        "item": "https://ionisai.com/services/crm-automation/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Will automations make changes in our CRM without us knowing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We build automations with the level of control you are comfortable with. That might mean automations create tasks and drafts that a human approves, or it might mean full automation for lower-risk actions like data enrichment. You decide the boundaries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does setup take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A focused CRM automation build typically takes two to four weeks depending on the complexity of your sales process and the number of integrations involved. We will give you a specific timeline after the discovery call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do we need to be on a premium CRM plan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on the CRM and what you want to automate. Some features require higher tier plans. We will tell you exactly what is needed before we start and will not recommend anything unnecessary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Our CRM data is a mess. Do we need to clean it first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not always. Some of what we build will clean the data as part of the automation. We will assess the state of your data during discovery and tell you honestly what needs to happen before automation can be effective."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you integrate the CRM with our other tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. CRM automation rarely lives in isolation. We commonly connect CRMs with outreach tools, calendar systems, Slack, reporting dashboards, and financial software. Whatever your stack looks like, we will work with it."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       IONIS AI — CRM Automation Service Page
+       Design system inherited from index2.html
+       ============================================================ */
+
+    :root {
+      --bg-primary:       #fafaf8;
+      --bg-light:         #f5f3f0;
+      --bg-dark:          #0d0a06;
+      --accent-primary:   #0066ff;
+      --accent-secondary: #00d9ff;
+      --text-primary:     #0d0a06;
+      --text-secondary:   #524a3f;
+      --text-tertiary:    #8b7f77;
+      --shadow-light:     #fafbff;
+      --shadow-dark:      rgba(166, 171, 189, 0.25);
+      --font-sans:        -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      --font-mono:        'SF Mono', 'Fira Code', 'Fira Mono', 'Courier New', monospace;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: #edf1f8;
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' seed='2'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Navigation ── */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(250, 250, 248, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.08);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent-primary); }
+
+    .nav-dropdown {
+      position: relative;
+      padding-bottom: 4px;
+      margin-bottom: -4px;
+    }
+
+    .nav-dropdown > a {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
+    }
+
+    .nav-dropdown > a::after {
+      content: '▾';
+      font-size: 0.65rem;
+      opacity: 0.6;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -0.75rem;
+      background: rgba(250, 250, 248, 0.98);
+      border: 1px solid rgba(0, 102, 255, 0.12);
+      border-top: 2px solid var(--accent-primary);
+      border-radius: 0 0 14px 14px;
+      padding: 0.4rem 0 0.6rem;
+      min-width: 260px;
+      box-shadow: 0 16px 40px rgba(13, 10, 6, 0.1);
+      z-index: 1001;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu { display: block; }
+
+    .dropdown-menu li { list-style: none; }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary) !important;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .dropdown-menu a:hover {
+      color: var(--accent-primary) !important;
+      background: rgba(0, 102, 255, 0.04);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: white !important;
+      padding: 0.6rem 1.3rem;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      font-size: 0.875rem !important;
+      box-shadow: 0 4px 16px rgba(0, 102, 255, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s !important;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.35) !important;
+      color: white !important;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── Scroll animations ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+
+    .fade-in.visible {
+      animation: fadeInUp 0.7s ease-out forwards;
+    }
+
+    .stagger-item {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .stagger-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-item:nth-child(1) { transition-delay: 0ms; }
+    .stagger-item:nth-child(2) { transition-delay: 100ms; }
+    .stagger-item:nth-child(3) { transition-delay: 200ms; }
+    .stagger-item:nth-child(4) { transition-delay: 300ms; }
+    .stagger-item:nth-child(5) { transition-delay: 400ms; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section {
+      padding: 6rem 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3vw, 2.6rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      margin: 0.6rem auto 0;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 2px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .section-outro {
+      text-align: center;
+      margin-top: 2.5rem;
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    .section-outro a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .section-outro a:hover { text-decoration: underline; }
+
+    /* ── Tile effect ── */
+    .hero {
+      margin: 74px 16px 12px;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .section {
+      margin: 0 16px 12px;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .cta-strip {
+      margin: 0 16px 12px;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    /* ── Hero ── */
+    @keyframes meshGradient {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero {
+      background: linear-gradient(135deg,
+        rgba(0, 102, 255, 0.08) 0%,
+        rgba(0, 217, 255, 0.05) 30%,
+        rgba(255, 107, 53, 0.04) 60%,
+        rgba(0, 102, 255, 0.06) 100%);
+      background-size: 400% 400%;
+      animation: meshGradient 14s ease infinite;
+      padding: 5rem 2rem 4.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 820px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      color: var(--text-primary);
+    }
+
+    .hero h1 .accent { color: var(--accent-primary); }
+
+    .subheadline {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto 2.2rem;
+      line-height: 1.75;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0, 102, 255, 0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(0, 102, 255, 0.38);
+    }
+
+    .btn-large {
+      padding: 1.1rem 2.6rem;
+      font-size: 1.05rem;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.8rem;
+      font-size: 0.85rem;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .breadcrumb li:not(:last-child)::after {
+      content: '›';
+      color: var(--text-tertiary);
+      font-size: 1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover { color: var(--accent-primary); }
+
+    .breadcrumb [aria-current="page"] { color: var(--text-tertiary); }
+
+    /* ── Section: Problem (peachy-purple) ── */
+    #problem {
+      background: linear-gradient(180deg,
+        #fff4f0 0%,
+        #fdf0f8 28%,
+        #f6eeff 62%,
+        #edf2ff 100%);
+    }
+
+    .problem-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .problem-item {
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(0, 102, 255, 0.08);
+      border-left: 3px solid rgba(0, 102, 255, 0.35);
+      border-radius: 14px;
+      padding: 1.3rem 1.6rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .problem-item:nth-child(2) { border-left-color: rgba(255, 140, 100, 0.5); }
+    .problem-item:nth-child(3) { border-left-color: rgba(80, 60, 220, 0.4); }
+    .problem-item:nth-child(4) { border-left-color: rgba(0, 217, 255, 0.55); }
+    .problem-item:nth-child(5) { border-left-color: rgba(255, 107, 53, 0.45); }
+
+    .problem-item h3 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .problem-item p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── Section: Deliverables (white) ── */
+    #deliverables {
+      background: #ffffff;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      background: rgba(246, 248, 253, 0.85);
+      border: 1px solid rgba(0, 102, 255, 0.1);
+      border-left: 3px solid rgba(0, 102, 255, 0.35);
+      border-radius: 16px;
+      padding: 1.8rem;
+      backdrop-filter: blur(10px);
+      box-shadow: -4px -4px 8px var(--shadow-light), 4px 4px 8px var(--shadow-dark);
+    }
+
+    .benefit-item:nth-child(2) { border-left-color: rgba(255, 140, 100, 0.5); }
+    .benefit-item:nth-child(3) { border-left-color: rgba(80, 60, 220, 0.4); }
+    .benefit-item:nth-child(4) { border-left-color: rgba(0, 217, 255, 0.55); }
+    .benefit-item:nth-child(5) { border-left-color: rgba(255, 107, 53, 0.45); }
+
+    .benefit-arrow {
+      font-size: 1.1rem;
+      color: var(--accent-primary);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+      font-family: var(--font-mono);
+    }
+
+    .benefit-item strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+
+    .benefit-item p {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .benefit-item p a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .benefit-item p a:hover { text-decoration: underline; }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.4rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ── Section: Workflows (dark navy) ── */
+    #workflows {
+      background: linear-gradient(160deg, #0d2e6e 0%, #122f78 50%, #0d2a68 100%);
+    }
+
+    #workflows .section-title { color: #ffffff; }
+
+    #workflows .section-title::after {
+      background: linear-gradient(90deg, #00d9ff, rgba(255, 255, 255, 0.35));
+    }
+
+    #workflows .section-intro { color: rgba(255, 255, 255, 0.7); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 16px;
+      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 3px solid rgba(0, 217, 255, 0.45);
+    }
+
+    .process-step:nth-child(2) { border-top-color: rgba(255, 255, 255, 0.25); }
+
+    .step-number {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #00d9ff;
+      margin-bottom: 1rem;
+    }
+
+    .process-step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: #ffffff;
+    }
+
+    .process-step p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      line-height: 1.75;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    /* ── Section: Audience (peach-to-lavender) ── */
+    #audience {
+      background: linear-gradient(130deg,
+        #ffd8c8 0%,
+        #ffe4e0 20%,
+        #ffecf0 35%,
+        #f6eaff 55%,
+        #eee0ff 80%,
+        #e8d8ff 100%);
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.4rem;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .audience-card {
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(0, 102, 255, 0.1);
+      border-top: 3px solid rgba(0, 102, 255, 0.3);
+      border-radius: 16px;
+      padding: 1.8rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .audience-card:nth-child(2) { border-top-color: rgba(80, 60, 220, 0.4); }
+    .audience-card:nth-child(3) { border-top-color: rgba(255, 140, 100, 0.55); }
+    .audience-card:nth-child(4) { border-top-color: rgba(0, 217, 255, 0.55); }
+
+    .audience-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .audience-card p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── Section: Tools (white) ── */
+    #tools {
+      background: #ffffff;
+    }
+
+    .tools-categories {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .tools-category {
+      background: rgba(246, 248, 253, 0.85);
+      border: 1px solid rgba(0, 102, 255, 0.08);
+      border-radius: 14px;
+      padding: 1.4rem 1.6rem;
+    }
+
+    .tools-category-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-tertiary);
+      margin-bottom: 0.9rem;
+    }
+
+    .tools-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tools-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: white;
+      border: 1px solid rgba(0, 102, 255, 0.1);
+      border-radius: 8px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .tools-list li img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+
+    .tools-note {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ── Section: FAQ (soft blue-purple) ── */
+    #faq {
+      background: linear-gradient(180deg,
+        #f4f0ff 0%,
+        #eef4ff 55%,
+        #f2f0ff 100%);
+    }
+
+    .faq-container {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(0, 102, 255, 0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: -4px -4px 8px var(--shadow-light), 4px 4px 8px var(--shadow-dark);
+    }
+
+    .faq-item summary {
+      padding: 1.4rem 1.8rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--text-primary);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.2s;
+      user-select: none;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--accent-primary);
+      font-weight: 300;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-left: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item[open] > summary::after { transform: rotate(45deg); }
+
+    .faq-item[open] > summary {
+      color: var(--accent-primary);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.08);
+    }
+
+    .faq-item summary:hover { color: var(--accent-primary); }
+
+    .faq-body { padding: 1.4rem 1.8rem; }
+
+    .faq-body p {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ── CTA Strip ── */
+    .cta-strip {
+      background: linear-gradient(160deg, #060f2a 0%, #0a1840 55%, #070e28 100%);
+      padding: 7rem 0;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .cta-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 55%, rgba(255, 145, 90, 0.09) 0%, transparent 62%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .cta-strip-content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-strip h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .cta-strip p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1rem;
+      margin-bottom: 2.2rem;
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--bg-light);
+      border-top: 1px solid rgba(0, 102, 255, 0.06);
+      padding-top: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .footer-logo { display: block; margin-bottom: 1rem; }
+
+    .footer-tagline {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.65;
+      max-width: 320px;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-address {
+      font-style: normal;
+      color: var(--text-tertiary);
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .footer-address a { color: var(--accent-primary); text-decoration: none; }
+    .footer-address a:hover { text-decoration: underline; }
+
+    .footer-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--accent-primary); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(0, 102, 255, 0.06);
+      padding: 1.2rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-bottom p {
+      color: var(--text-tertiary);
+      font-size: 0.8rem;
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .site-nav { padding: 0.9rem 1.2rem; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-primary);
+        border-bottom: 1px solid rgba(0, 102, 255, 0.08);
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        z-index: 999;
+        box-shadow: 0 8px 24px var(--shadow-dark);
+      }
+
+      .nav-links.open .dropdown-menu {
+        display: block;
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 0.3rem 0 0 1rem;
+        min-width: auto;
+      }
+
+      .hero { padding: 4rem 1.5rem 3.5rem; }
+      .section { padding: 4.5rem 0; }
+
+      .benefits-grid,
+      .audience-grid,
+      .process-steps { grid-template-columns: 1fr; gap: 1.5rem; max-width: 480px; margin: 0 auto; }
+
+      .footer-container { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-nav { grid-template-columns: 1fr 1fr; }
+      .cta-strip { padding: 5rem 0; }
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .section,
+      .cta-strip { margin-left: 8px; margin-right: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 1.2rem; }
+      .footer-nav { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="/" class="logo" aria-label="Ionis AI — home">IONIS AI</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-dropdown">
+          <a href="/services/">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="/services/cold-email-outreach/">Cold Email Outreach</a></li>
+            <li><a href="/services/inbound-lead-qualification/">Inbound Lead Qualification</a></li>
+            <li><a href="/services/crm-automation/">CRM Automation</a></li>
+            <li><a href="/services/marketing-intelligence/">Marketing Intelligence</a></li>
+            <li><a href="/services/custom-dashboards/">Custom Dashboards</a></li>
+            <li><a href="/services/business-process-automation/">Business Process Automation</a></li>
+            <li><a href="/services/content-automation/">Content Automation</a></li>
+            <li><a href="/services/financial-automation/">Financial Automation</a></li>
+            <li><a href="/services/bespoke-automation/">Bespoke AI Automation</a></li>
+            <li><a href="/services/seo-audits/">SEO Audits</a></li>
+            <li><a href="/services/website-design/">Website Design and Build</a></li>
+          </ul>
+        </li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="https://cal.com/ionisai/discovery" class="nav-cta">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li aria-current="page">CRM Automation</li>
+          </ol>
+        </nav>
+        <h1>AI CRM Automation for <span class="accent">B2B Revenue Teams</span></h1>
+        <p class="subheadline">Turn your CRM from a graveyard into a tool that actually runs your sales process. We automate the data entry, the follow-up tasks, and the pipeline visibility that your team never has time to maintain manually.</p>
+        <a href="https://cal.com/ionisai/discovery" class="btn-primary">Book a Call</a>
+      </div>
+    </section>
+
+    <!-- ── THE CRM PROBLEM ── -->
+    <section class="section" id="problem">
+      <div class="container">
+        <h2 class="section-title fade-in">The CRM Problem</h2>
+        <p class="section-intro fade-in">Most CRMs are full of incomplete data, missed tasks, and deals that went nowhere because nobody followed up. That is not a people problem. It is a process problem.</p>
+        <div class="problem-grid">
+
+          <div class="problem-item stagger-item">
+            <h3>Dirty data nobody trusts</h3>
+            <p>If your team does not trust the CRM data, they stop using it. Contacts with missing fields, outdated job titles, and wrong company info are not just annoying. They make the whole system unreliable.</p>
+          </div>
+
+          <div class="problem-item stagger-item">
+            <h3>Follow-up tasks that never get created</h3>
+            <p>When creating a follow-up task depends on a rep remembering to do it after every call and every email, some of them will not happen. The deals that fall through the cracks are often the ones worth saving.</p>
+          </div>
+
+          <div class="problem-item stagger-item">
+            <h3>No pipeline visibility</h3>
+            <p>If your pipeline view only reflects what reps have remembered to update, you are not looking at your pipeline. You are looking at a partial picture that gives you false confidence or false panic.</p>
+          </div>
+
+          <div class="problem-item stagger-item">
+            <h3>Renewal and upsell opportunities missed</h3>
+            <p>Existing clients are your easiest revenue. But if nobody is monitoring contract dates or flagging accounts that have gone quiet, those opportunities pass without a conversation ever happening.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHAT WE AUTOMATE IN YOUR CRM ── -->
+    <section class="section" id="deliverables">
+      <div class="container">
+        <h2 class="section-title fade-in">What We Automate in Your CRM</h2>
+        <p class="section-intro fade-in">We build automations that handle the repetitive work inside your CRM so the data stays clean, the follow-ups happen, and the pipeline reflects reality.</p>
+        <div class="benefits-grid">
+
+          <div class="benefit-item stagger-item">
+            <div class="benefit-arrow">→</div>
+            <div>
+              <strong>Data Enrichment</strong>
+              <p>The system automatically fills missing contact and company fields using third-party data sources. Job title, company size, industry, LinkedIn profile, phone number. Your CRM stays accurate without anyone doing it manually.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item stagger-item">
+            <div class="benefit-arrow">→</div>
+            <div>
+              <strong>Automatic Task Creation</strong>
+              <p>When a deal moves to a new stage, when a call is logged, or when an email gets no reply after a set number of days, the system creates the right follow-up task automatically. Nothing gets missed because nothing depends on someone remembering.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item stagger-item">
+            <div class="benefit-arrow">→</div>
+            <div>
+              <strong>Pipeline Hygiene</strong>
+              <p>The system identifies stale deals, flags them to the rep, and prompts an update or a close. Your pipeline reflects reality rather than wishful thinking.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item stagger-item">
+            <div class="benefit-arrow">→</div>
+            <div>
+              <strong>Renewal and Upsell Alerts</strong>
+              <p>As contracts approach renewal dates, the system triggers an alert and starts a re-engagement sequence. Accounts that have gone quiet get flagged before they become a churn risk.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item stagger-item">
+            <div class="benefit-arrow">→</div>
+            <div>
+              <strong>Automated Reporting</strong>
+              <p>Deal stage summaries, activity reports, and revenue forecasts are generated and distributed automatically on a schedule. No more building the same spreadsheet every Friday.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXAMPLE WORKFLOW ── -->
+    <section class="section" id="workflows">
+      <div class="container">
+        <h2 class="section-title fade-in">Example Workflow</h2>
+        <div class="process-steps">
+
+          <div class="process-step stagger-item">
+            <span class="step-number">01</span>
+            <h3>A New Deal Enters the Pipeline</h3>
+            <p>A new contact is created in the CRM. The system enriches the record with missing data, creates a discovery call task for the rep, and sets a five-day follow-up reminder. If there is no activity after ten days, the system flags the deal to the rep's manager. If the deal moves to proposal stage, the system creates a new task set for that stage and removes the old ones. Every step is logged automatically.</p>
+          </div>
+
+          <div class="process-step stagger-item">
+            <span class="step-number">02</span>
+            <h3>An Existing Client Approaches Renewal</h3>
+            <p>Ninety days before a contract end date, the system flags the account, creates a renewal task for the account manager, and starts a light-touch re-engagement email sequence. The account manager knows about it in advance. The client feels looked after. The renewal conversation happens before the client starts looking elsewhere.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHO THIS IS FOR ── -->
+    <section class="section" id="audience">
+      <div class="container">
+        <h2 class="section-title fade-in">Who This Is For</h2>
+        <p class="section-intro fade-in">CRM automation works best for B2B businesses where sales cycle length, data quality, and consistent follow-up all have a direct impact on revenue.</p>
+        <div class="audience-grid">
+
+          <div class="audience-card stagger-item">
+            <h3>Sales Teams Using HubSpot, Pipedrive, or Salesforce</h3>
+            <p>If your team is already on a CRM but not getting the value from it because of data quality and inconsistent usage, automation fixes the process without requiring a new tool.</p>
+          </div>
+
+          <div class="audience-card stagger-item">
+            <h3>Businesses with Longer Sales Cycles</h3>
+            <p>The longer the sales cycle, the more important consistent follow-up becomes. Automation keeps deals moving without relying on reps to manually track every touchpoint across weeks or months.</p>
+          </div>
+
+          <div class="audience-card stagger-item">
+            <h3>Revenue Leaders Who Want Accurate Forecasting</h3>
+            <p>If you cannot trust your pipeline data, you cannot forecast accurately. Automated data hygiene and task creation means the numbers you look at actually reflect what is happening.</p>
+          </div>
+
+          <div class="audience-card stagger-item">
+            <h3>Agencies and Services Businesses Managing Retainer Clients</h3>
+            <p>If you have recurring revenue and renewal dates to manage, CRM automation makes sure those conversations happen at the right time every time.</p>
+          </div>
+
+        </div>
+        <p class="section-outro fade-in">CRM automation works alongside lead generation. If you are building outbound pipeline, see our <a href="/services/cold-email-outreach/">Cold Email Outreach</a> service. If you are handling inbound, see <a href="/services/inbound-lead-qualification/">Inbound Lead Qualification</a>. Both connect directly with your CRM.</p>
+      </div>
+    </section>
+
+    <!-- ── CRM PLATFORMS WE WORK WITH ── -->
+    <section class="section" id="tools">
+      <div class="container">
+        <h2 class="section-title fade-in">CRM Platforms We Work With</h2>
+        <p class="section-intro fade-in">We build automations on top of your existing CRM. No migration required in most cases.</p>
+        <div class="tools-categories">
+
+          <div class="tools-category stagger-item">
+            <p class="tools-category-label">CRM platforms</p>
+            <ul class="tools-list">
+              <li><img src="" alt="HubSpot logo" width="16" height="16">HubSpot</li>
+              <li><img src="" alt="GoHighLevel logo" width="16" height="16">GoHighLevel</li>
+              <li><img src="" alt="Salesforce logo" width="16" height="16">Salesforce</li>
+              <li><img src="" alt="Pipedrive logo" width="16" height="16">Pipedrive</li>
+              <li><img src="" alt="Zoho CRM logo" width="16" height="16">Zoho CRM</li>
+              <li><img src="" alt="Close logo" width="16" height="16">Close</li>
+            </ul>
+          </div>
+
+          <div class="tools-category stagger-item">
+            <p class="tools-category-label">Project management and ops tools</p>
+            <ul class="tools-list">
+              <li><img src="" alt="ClickUp logo" width="16" height="16">ClickUp</li>
+              <li><img src="" alt="Monday.com logo" width="16" height="16">Monday.com</li>
+              <li><img src="" alt="Notion logo" width="16" height="16">Notion</li>
+              <li><img src="" alt="Airtable logo" width="16" height="16">Airtable</li>
+            </ul>
+            <p class="tools-note">We connect these to your CRM where workflows cross both systems.</p>
+          </div>
+
+        </div>
+        <p class="section-outro fade-in">If your CRM is not listed, ask us. We work with most tools that have an API.</p>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title fade-in">Frequently Asked Questions</h2>
+        <div class="faq-container">
+
+          <details class="faq-item fade-in">
+            <summary>Will automations make changes in our CRM without us knowing?</summary>
+            <div class="faq-body">
+              <p>No. We build automations with the level of control you are comfortable with. That might mean automations create tasks and drafts that a human approves, or it might mean full automation for lower-risk actions like data enrichment. You decide the boundaries.</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-in">
+            <summary>How long does setup take?</summary>
+            <div class="faq-body">
+              <p>A focused CRM automation build typically takes two to four weeks depending on the complexity of your sales process and the number of integrations involved. We will give you a specific timeline after the discovery call.</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-in">
+            <summary>Do we need to be on a premium CRM plan?</summary>
+            <div class="faq-body">
+              <p>It depends on the CRM and what you want to automate. Some features require higher tier plans. We will tell you exactly what is needed before we start and will not recommend anything unnecessary.</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-in">
+            <summary>Our CRM data is a mess. Do we need to clean it first?</summary>
+            <div class="faq-body">
+              <p>Not always. Some of what we build will clean the data as part of the automation. We will assess the state of your data during discovery and tell you honestly what needs to happen before automation can be effective.</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-in">
+            <summary>Can you integrate the CRM with our other tools?</summary>
+            <div class="faq-body">
+              <p>Yes. CRM automation rarely lives in isolation. We commonly connect CRMs with outreach tools, calendar systems, Slack, reporting dashboards, and financial software. Whatever your stack looks like, we will work with it.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA STRIP ── -->
+    <section class="cta-strip" id="contact">
+      <div class="cta-strip-content">
+        <h2>Your CRM Should Be Working For You</h2>
+        <p>Book a call. We will look at your current CRM setup and show you exactly what can be automated.</p>
+        <a href="https://cal.com/ionisai/discovery" class="btn-primary btn-large">Book a Call</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="/" class="logo footer-logo" aria-label="Ionis AI — home">IONIS AI</a>
+        <p class="footer-tagline">Ionis AI is a UK-based AI automation agency helping B2B businesses worldwide generate more leads and run leaner operations.</p>
+        <address class="footer-address">
+          London, UK<br>
+          <a href="mailto:josh@ionisai.com">josh@ionisai.com</a>
+        </address>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/cold-email-outreach/">Cold Email Outreach</a></li>
+            <li><a href="/services/inbound-lead-qualification/">Inbound Lead Qualification</a></li>
+            <li><a href="/services/crm-automation/">CRM Automation</a></li>
+            <li><a href="/services/business-process-automation/">Business Process Automation</a></li>
+            <li><a href="/services/website-design/">Website Design and Build</a></li>
+            <li><a href="/services/bespoke-automation/">Bespoke AI Automation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="mailto:josh@ionisai.com">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ionis AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var navLinks = document.getElementById('nav-links');
+      if (!toggle || !navLinks) return;
+
+      toggle.addEventListener('click', function () {
+        var isOpen = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!isOpen));
+        navLinks.classList.toggle('open', !isOpen);
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          toggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('open');
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('nav')) {
+          toggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('open');
+        }
+      });
+    }());
+
+    // Scroll-triggered animations
+    (function () {
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.fade-in, .stagger-item').forEach(function (el) {
+          el.classList.add('visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      document.querySelectorAll('.fade-in, .stagger-item').forEach(function (el) {
+        observer.observe(el);
+      });
+    }());
+  </script>
+
+</body>
+</html>
