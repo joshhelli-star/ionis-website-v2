@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B2B Appointment Setting: Book More Qualified Meetings | Ionis AI</title>
+  <meta name="description" content="Most B2B appointment setting fails because it optimises for volume over fit. Here is how to build a system that books meetings worth having.">
+  <link rel="canonical" href="https://ionisai.com/blog/b2b-appointment-setting/" />
+
+  <meta property="og:title" content="B2B Appointment Setting: Book More Qualified Meetings | Ionis AI" />
+  <meta property="og:description" content="Most B2B appointment setting fails because it optimises for volume over fit. Here is how to build a system that books meetings worth having." />
+  <meta property="og:url" content="https://ionisai.com/blog/b2b-appointment-setting/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ionis AI" />
+  <meta property="og:image" content="https://ionisai.com/og-default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="B2B Appointment Setting: Book More Qualified Meetings | Ionis AI" />
+  <meta name="twitter:description" content="Most B2B appointment setting fails because it optimises for volume over fit. Here is how to build a system that books meetings worth having." />
+  <meta name="twitter:image" content="https://ionisai.com/og-default.png" />
+
+  <!-- Schema: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "B2B Appointment Setting: How to Book More Qualified Meetings Without Burning Your List",
+    "description": "Most B2B appointment setting fails because it optimises for volume over fit. Here is how to build a system that books meetings worth having.",
+    "url": "https://ionisai.com/blog/b2b-appointment-setting/",
+    "datePublished": "2026-02-28",
+    "dateModified": "2026-02-28",
+    "author": {
+      "@type": "Person",
+      "name": "Josh Hellicar",
+      "url": "https://ionisai.com/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ionis AI",
+      "url": "https://ionisai.com"
+    },
+    "keywords": ["B2B appointment setting", "appointment setting agency B2B", "how to book more B2B meetings", "outbound appointment setting", "B2B meeting booking"]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ionisai.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://ionisai.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "B2B Appointment Setting",
+        "item": "https://ionisai.com/blog/b2b-appointment-setting/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       IONIS AI — Blog Post Template
+       Clean, readable, editorial. Nav + footer from design system.
+       ============================================================ */
+
+    :root {
+      --accent-primary: #0066ff;
+      --accent-secondary: #00d9ff;
+      --text-primary: #0d0a06;
+      --text-secondary: #524a3f;
+      --text-tertiary: #8b7f77;
+      --border: rgba(0, 0, 0, 0.08);
+      --bg: #ffffff;
+      --bg-page: #f5f4f1;
+      --shadow-light: #fafbff;
+      --shadow-dark: rgba(166, 171, 189, 0.25);
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Courier New', monospace;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── Navigation (identical to site-wide nav) ── */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(250, 250, 248, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.08);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent-primary); }
+
+    .nav-dropdown {
+      position: relative;
+      padding-bottom: 4px;
+      margin-bottom: -4px;
+    }
+
+    .nav-dropdown > a {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
+    }
+
+    .nav-dropdown > a::after {
+      content: '▾';
+      font-size: 0.65rem;
+      opacity: 0.6;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -0.75rem;
+      background: rgba(250, 250, 248, 0.98);
+      border: 1px solid rgba(0, 102, 255, 0.12);
+      border-top: 2px solid var(--accent-primary);
+      border-radius: 0 0 14px 14px;
+      padding: 0.4rem 0 0.6rem;
+      min-width: 260px;
+      box-shadow: 0 16px 40px rgba(13, 10, 6, 0.1);
+      z-index: 1001;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu { display: block; }
+
+    .dropdown-menu li { list-style: none; }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary) !important;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .dropdown-menu a:hover {
+      color: var(--accent-primary) !important;
+      background: rgba(0, 102, 255, 0.04);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: white !important;
+      padding: 0.6rem 1.3rem;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      font-size: 0.875rem !important;
+      box-shadow: 0 4px 16px rgba(0, 102, 255, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s !important;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.35) !important;
+      color: white !important;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── Page wrapper ── */
+    .page-wrapper {
+      margin-top: 62px;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    /* ── Blog layout: content + sidebar ── */
+    .blog-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* ── Article card ── */
+    .article-card {
+      background: var(--bg);
+      border-radius: 20px;
+      padding: 3.5rem 3.5rem 3rem;
+      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover { color: var(--accent-primary); }
+
+    .breadcrumb-sep { opacity: 0.5; }
+
+    /* ── Post header ── */
+    .post-header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .post-category {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-primary);
+      background: rgba(0, 102, 255, 0.07);
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .post-header h1 {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-primary);
+      margin-bottom: 1.2rem;
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      font-size: 0.83rem;
+      color: var(--text-tertiary);
+    }
+
+    .post-meta-author {
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .post-meta-sep {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--text-tertiary);
+      opacity: 0.5;
+      flex-shrink: 0;
+    }
+
+    /* ── Article body typography ── */
+    .post-body {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    .post-body p {
+      margin-bottom: 1.4rem;
+    }
+
+    .post-body p:last-child { margin-bottom: 0; }
+
+    .post-body h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 2.8rem 0 0.9rem;
+      line-height: 1.3;
+    }
+
+    .post-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 2rem 0 0.6rem;
+    }
+
+    /* Accent rule under each h2 */
+    .post-body h2::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 2px;
+      margin-top: 0.4rem;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 2px;
+    }
+
+    .post-body a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 102, 255, 0.25);
+      transition: border-color 0.2s;
+    }
+
+    .post-body a:hover {
+      border-color: var(--accent-primary);
+    }
+
+    .post-body .btn-primary,
+    .post-body .btn-primary:hover {
+      color: white;
+      border-bottom: none;
+    }
+
+    .post-body .btn-ghost,
+    .post-body .btn-ghost:hover {
+      border-bottom: none;
+    }
+
+    .post-body strong {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .post-body ul, .post-body ol {
+      margin: 0 0 1.4rem 1.2rem;
+    }
+
+    .post-body li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Numbered callout for the "reasons" section */
+    .post-body h3 .step-num {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      background: rgba(0, 102, 255, 0.08);
+      border-radius: 6px;
+      padding: 0.1rem 0.45rem;
+      margin-right: 0.5rem;
+      letter-spacing: 0;
+      vertical-align: middle;
+    }
+
+    /* Horizontal rule between major sections */
+    .post-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Inline key point highlight */
+    .post-body .callout {
+      background: rgba(0, 102, 255, 0.05);
+      border-left: 3px solid var(--accent-primary);
+      border-radius: 0 10px 10px 0;
+      padding: 1rem 1.4rem;
+      margin: 1.6rem 0;
+      font-size: 0.97rem;
+      color: var(--text-primary);
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    /* Related reading block at bottom */
+    .related-reading {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+    }
+
+    .related-reading a {
+      color: var(--accent-primary);
+      font-weight: 600;
+      border-bottom: 1px solid rgba(0, 102, 255, 0.25);
+      text-decoration: none;
+    }
+
+    .related-reading a:hover { border-color: var(--accent-primary); }
+
+    /* ── Post CTA (inline, end of article) ── */
+    .post-cta {
+      margin-top: 2.8rem;
+      padding: 2rem 2.2rem;
+      background: linear-gradient(160deg, #060f2a, #0a1840);
+      border-radius: 16px;
+    }
+
+    .post-cta p {
+      margin: 0 0 1.2rem;
+      font-size: 0.97rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.7;
+    }
+
+    .post-cta-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: white;
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border: none;
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(0, 102, 255, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.35);
+    }
+
+    .btn-ghost {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-ghost:hover {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      position: sticky;
+      top: 88px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .sidebar-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 1.6rem;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-card h4 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    /* Table of contents */
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .toc-list a {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
+      line-height: 1.4;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .toc-list a:hover {
+      background: rgba(0, 102, 255, 0.06);
+      color: var(--accent-primary);
+    }
+
+    /* CTA sidebar card */
+    .sidebar-cta {
+      background: linear-gradient(160deg, #060f2a, #0a1840);
+      color: white;
+      border-radius: 16px;
+      padding: 1.8rem 1.6rem;
+    }
+
+    .sidebar-cta h4 {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.8rem;
+    }
+
+    .sidebar-cta p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .sidebar-cta .btn-primary {
+      width: 100%;
+      text-align: center;
+      font-size: 0.875rem;
+      padding: 0.7rem 1rem;
+    }
+
+    /* Author card */
+    .author-card {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .author-info span {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #f0ede8;
+      border-top: 1px solid rgba(0, 102, 255, 0.06);
+      padding-top: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .footer-logo { display: block; margin-bottom: 1rem; }
+
+    .footer-tagline {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.65;
+      max-width: 320px;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-address {
+      font-style: normal;
+      color: var(--text-tertiary);
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .footer-address a { color: var(--accent-primary); text-decoration: none; }
+    .footer-address a:hover { text-decoration: underline; }
+
+    .footer-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--accent-primary); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(0, 102, 255, 0.06);
+      padding: 1.2rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-bottom p {
+      color: var(--text-tertiary);
+      font-size: 0.8rem;
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .blog-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .site-nav { padding: 0.9rem 1.2rem; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fafaf8;
+        border-bottom: 1px solid rgba(0, 102, 255, 0.08);
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+        z-index: 999;
+        box-shadow: 0 8px 24px rgba(166, 171, 189, 0.25);
+      }
+
+      .nav-links.open .dropdown-menu {
+        display: none;
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 0.3rem 0 0 1rem;
+        min-width: auto;
+      }
+      .nav-links.open .nav-dropdown.open .dropdown-menu {
+        display: block;
+      }
+
+      .page-wrapper { padding: 2rem 1rem 4rem; }
+      .article-card { padding: 2rem 1.5rem; }
+      .sidebar { grid-template-columns: 1fr; }
+      .footer-container { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-nav { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-nav { grid-template-columns: 1fr; }
+      .post-cta-links { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="/" class="logo" aria-label="Ionis AI — home">IONIS AI</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="/services/">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="/services/cold-email-outreach/">Cold Email Outreach</a></li>
+            <li><a href="/services/inbound-lead-qualification/">Inbound Lead Qualification</a></li>
+            <li><a href="/services/crm-automation/">CRM Automation</a></li>
+            <li><a href="/services/marketing-intelligence/">Marketing Intelligence</a></li>
+            <li><a href="/services/custom-dashboards/">Custom Dashboards</a></li>
+            <li><a href="/services/business-process-automation/">Business Process Automation</a></li>
+            <li><a href="/services/content-automation/">Content Automation</a></li>
+            <li><a href="/services/financial-automation/">Financial Automation</a></li>
+            <li><a href="/services/bespoke-automation/">Bespoke AI Automation</a></li>
+            <li><a href="/services/seo-audits/">SEO Audits</a></li>
+            <li><a href="/services/website-design/">Website Design and Build</a></li>
+          </ul>
+        </li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/" aria-current="page">Blog</a></li>
+        <li><a href="https://cal.com/ionisai/discovery" class="nav-cta">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="blog-layout">
+
+      <!-- ── MAIN ARTICLE ── -->
+      <main>
+        <article class="article-card">
+
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <a href="/blog/">Blog</a>
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span aria-current="page">B2B Appointment Setting</span>
+          </nav>
+
+          <!-- Post header -->
+          <header class="post-header">
+            <span class="post-category">Lead Generation</span>
+            <h1>B2B Appointment Setting: How to Book More Qualified Meetings Without Burning Your List</h1>
+            <div class="post-meta">
+              <span class="post-meta-author">Josh Hellicar</span>
+              <span class="post-meta-sep" aria-hidden="true"></span>
+              <!-- Update datetime and text below when this post is edited -->
+              <time datetime="2026-02-28">28 February 2026</time>
+              <span class="post-meta-sep" aria-hidden="true"></span>
+              <span>8 min read</span>
+            </div>
+          </header>
+
+          <!-- Post body -->
+          <div class="post-body">
+
+            <p>Most B2B appointment setting programmes are measured on the wrong thing.</p>
+
+            <p>The metric is meetings booked. The assumption is that more meetings means more pipeline. But if the meetings are with people who were never going to buy — wrong company size, wrong role, wrong timing, wrong problem — then more meetings just means more wasted hours for your sales team.</p>
+
+            <p>A calendar full of the wrong meetings is not just unproductive. It is demoralising, and it burns through a finite list of prospects who might have been worth talking to at a later point.</p>
+
+            <p>This post is about building an appointment setting system that is optimised for the right metric: qualified pipeline.</p>
+
+            <hr>
+
+            <h2 id="the-problem">The appointment setting problem nobody admits</h2>
+
+            <p>The pressure in most outbound sales programmes runs in one direction: more activity. More calls, more emails, more LinkedIn messages, more meetings. Activity metrics are easy to track and easy to report upwards, which is precisely why they get used even when they are a poor proxy for what actually matters.</p>
+
+            <p>The problem is that optimising for meetings booked creates perverse incentives. SDRs learn to book meetings with anyone who will take one, not just the people who should. Prospects get nudged into calls they are not ready for. And sales executives spend their days in conversations that were never going to close.</p>
+
+            <div class="callout">A quiet calendar with five genuinely qualified meetings is worth more than a full one with fifteen that go nowhere. The goal is not activity. The goal is qualified pipeline.</div>
+
+            <p>This is a harder case to make internally when the metrics dashboard shows meetings booked, but it is the right one. The businesses that build durable outbound programmes are the ones that accept a lower volume of higher-quality conversations rather than chasing the activity number.</p>
+
+            <hr>
+
+            <h2 id="what-works">What makes a B2B appointment setting system actually work</h2>
+
+            <p>There is no shortage of frameworks for appointment setting, but the ones that consistently produce qualified meetings share a few common traits.</p>
+
+            <h3>A precise ICP definition</h3>
+
+            <p>Most businesses say they have defined their ideal client profile. Most have not done it precisely enough to be useful. "Mid-market B2B companies" is not a targeting criterion. "SaaS businesses with 50–200 employees, a dedicated sales team, and a CRM they are actively using but not fully utilising" is one.</p>
+
+            <p>Useful ICP definitions include industry, company size range, role and seniority of the decision maker, technology signals, growth stage, and ideally trigger events — things that indicate a company is likely to be in-market right now. A funding round, a new hire in a relevant role, a product launch, a period of rapid headcount growth. These signals dramatically improve the hit rate on outreach.</p>
+
+            <h3>Sequencing that earns the meeting</h3>
+
+            <p>The dominant approach in B2B cold outreach is to pitch on the first touch and then follow up with increasingly desperate nudges. It does not work well and it burns through good prospects.</p>
+
+            <p>A better approach is to lead with value and earn the meeting over multiple touchpoints. That might mean sharing a relevant insight, referencing something specific about the prospect's situation, or demonstrating that you understand their world before asking for their time. Our <a href="/services/cold-email-outreach/">cold email outreach service</a> is built around this approach — sequences designed to create genuine interest rather than manufacture urgency.</p>
+
+            <h3>Qualification before the meeting, not during it</h3>
+
+            <p>Discovery calls are expensive. They take time from your best people. The goal of your appointment setting process should be to ensure that by the time someone gets to a discovery call, you already know they are worth talking to.</p>
+
+            <p>This means building qualification into your outreach sequence — asking a question that surfaces intent or confirms fit before the meeting is booked. It also means using your <a href="/services/inbound-lead-qualification/">inbound lead qualification</a> process to make sure that anyone who comes in through your website or marketing has been assessed before they land on a salesperson's calendar.</p>
+
+            <hr>
+
+            <h2 id="channels">Cold email vs other outbound channels for appointment setting</h2>
+
+            <p>The honest assessment of outbound channels in 2026 is that they are not equally effective across all contexts, and the right mix depends on your market, your price point, and your audience.</p>
+
+            <p><strong>Cold email at scale</strong> remains the most cost-effective outbound channel for B2B appointment setting when it is done properly — meaning good infrastructure, strong targeting, short personalised sequences, and clean lists. The economics work well at volume, and it is the only channel where you can run genuine personalisation across hundreds of prospects per day without proportionate headcount. The caveat is that deliverability has to be right. If your emails are not reaching the inbox, everything else is irrelevant.</p>
+
+            <p><strong>LinkedIn outreach</strong> works well for high-value enterprise deals where relationship-building matters and the prospect pool is small enough to justify the manual effort. It does not scale in the same way as email and the response rates at volume are generally lower, but the quality of conversation when it works can be higher. It is most effective as a complement to email rather than a replacement for it.</p>
+
+            <p><strong>Cold calling</strong> has not disappeared despite repeated declarations to that effect. For certain industries — financial services, recruitment, some professional services — it still generates results. The problem is the economics: it is time-intensive, the hit rate is low, and it is difficult to personalise at scale. Most B2B businesses are better served by email and LinkedIn with calling reserved for warm follow-up on engaged prospects.</p>
+
+            <p>For a broader view of how these channels fit into a full lead generation system, the post on <a href="/blog/b2b-lead-generation-system/">building a B2B lead generation system that books qualified meetings</a> goes into more depth on the architecture.</p>
+
+            <hr>
+
+            <h2 id="qualify-before">How to qualify leads before the meeting</h2>
+
+            <p>The simplest qualification framework is still one of the most useful: budget, authority, need, and timing. Before a prospect gets to a discovery call, you want reasonable confidence on at least three of those four.</p>
+
+            <p>You do not need to run a formal qualification interview to get there. The information often surfaces naturally through the outreach exchange itself. How a prospect responds to your initial email tells you something about their engagement level. What they say when they accept a meeting tells you about their framing of the problem. The questions they ask before the call are a strong signal of intent.</p>
+
+            <p>For email-driven outreach, adding a single qualifying question into your sequence — something that requires a genuine answer rather than a yes or no — is an effective filter. Prospects who engage thoughtfully are worth your time. Those who respond with "send me more info" generally are not.</p>
+
+            <p>For inbound leads, the qualification process can be more systematic. An AI-powered <a href="/services/inbound-lead-qualification/">inbound qualification workflow</a> can assess a lead the moment they fill in a form, ask relevant follow-up questions automatically, score them against your ICP, and present your team with a summary before they spend any time on the conversation. This is one of the highest-leverage automations a B2B business can implement — the cost of a badly qualified sales call is significant, and the technology to prevent it is straightforward.</p>
+
+            <p>Whichever approach you use, the principle is the same: the qualification work happens before the calendar invite, not during it. Discovery calls are for exploring fit in depth, not establishing whether basic fit exists at all.</p>
+
+            <hr>
+
+            <h2 id="what-kills-it">What kills appointment setting programmes</h2>
+
+            <p>Most appointment setting programmes that fail do so for predictable reasons.</p>
+
+            <p><strong>Untargeted lists.</strong> If you are sending to everyone, you are targeting no one. Broad outreach to loosely defined lists produces low response rates, poor meeting quality, and fast list exhaustion. Tighten the targeting before you scale the volume.</p>
+
+            <p><strong>Deliverability problems.</strong> You cannot book meetings from emails that never reach the inbox. This is infrastructure-level and needs to be right before anything else. If you are unsure whether your cold email is landing properly, the post on <a href="/blog/why-cold-email-goes-to-spam/">why cold email goes to spam</a> covers the most common causes and how to fix them.</p>
+
+            <p><strong>Sequences that pitch too early.</strong> Leading with your proposition on the first touch rarely works in B2B. The prospect has no context, no trust, and no reason to engage. Build relevance and credibility across the first few touchpoints before you make an explicit ask. Sequences that open with insight or with a genuine question about the prospect's situation consistently outperform those that open with a product pitch.</p>
+
+            <p><strong>No follow-up process after the meeting.</strong> Appointment setting does not end when the meeting is booked. What happens immediately after a discovery call — the follow-up email, the next step proposed, the speed of response — has a significant impact on whether the meeting converts to a genuine opportunity. Automating the post-meeting workflow with <a href="/services/crm-automation/">CRM automation</a> ensures nothing falls through the cracks: the contact is updated, the follow-up is triggered, and the next touchpoint is scheduled without anyone having to remember to do it manually.</p>
+
+            <hr>
+
+            <h2 id="diy-vs-agency">Building your own system versus using an agency</h2>
+
+            <p>Building an outbound appointment setting programme in-house is entirely feasible. The tools are accessible, the knowledge is available, and many businesses do it successfully. What it requires is time, consistent attention, and someone who owns the process.</p>
+
+            <p>The infrastructure side — sending domains, warm-up, DNS records, list verification, sequence tooling — takes a few weeks to set up properly and ongoing effort to maintain. The targeting and copy work is continuous: lists need refreshing, sequences need testing, and what works today may not work in six months as inboxes adapt. The <a href="/services/business-process-automation/">operational overhead</a> of keeping an outbound programme running well is real and often underestimated at the outset.</p>
+
+            <p>An agency makes sense when the opportunity cost of that time is high — when your team's hours are better spent on the conversations the programme generates than on the infrastructure that generates them. It also makes sense when you want results faster than the internal learning curve allows. Building outbound from scratch and running it optimally from day one are two different challenges, and most businesses benefit from having done it before.</p>
+
+            <p>If you are assessing the options, our <a href="/pricing/">pricing page</a> sets out how we structure engagements and what is included. The short version is that we handle the full stack — targeting, infrastructure, copy, and ongoing management — so your team focuses on the qualified meetings, not on the system that produces them.</p>
+
+            <!-- Post CTA -->
+            <div class="post-cta">
+              <p>If you want to book more qualified B2B meetings without building the infrastructure yourself, book a call and we will walk through what a programme could look like for your business.</p>
+              <div class="post-cta-links">
+                <a href="https://cal.com/ionisai/discovery" class="btn-primary">Book a Call</a>
+                <a href="/services/cold-email-outreach/" class="btn-ghost">Our cold email outreach service →</a>
+              </div>
+            </div>
+
+            <!-- Related reading -->
+            <div class="related-reading">
+              <strong>Related reading:</strong> For the full picture on how outbound fits into a broader lead generation system, see <a href="/blog/b2b-lead-generation-system/">How to Build a B2B Lead Generation System That Books Qualified Meetings</a>. And if you are running cold email already and not seeing results, <a href="/blog/why-cold-email-goes-to-spam/">Why Your Cold Email Is Going to Spam</a> is likely where to start.
+            </div>
+
+          </div>
+        </article>
+      </main>
+
+      <!-- ── SIDEBAR ── -->
+      <aside class="sidebar" aria-label="Article sidebar">
+
+        <!-- Table of contents -->
+        <div class="sidebar-card">
+          <h4>In this article</h4>
+          <ul class="toc-list">
+            <li><a href="#the-problem">The problem nobody admits</a></li>
+            <li><a href="#what-works">What makes it work</a></li>
+            <li><a href="#channels">Cold email vs other channels</a></li>
+            <li><a href="#qualify-before">Qualifying before the meeting</a></li>
+            <li><a href="#what-kills-it">What kills programmes</a></li>
+            <li><a href="#diy-vs-agency">DIY vs using an agency</a></li>
+          </ul>
+        </div>
+
+        <!-- CTA card -->
+        <div class="sidebar-cta">
+          <h4>Need help?</h4>
+          <p>We build outbound appointment setting systems that produce qualified meetings — targeting, infrastructure, copy, and management included.</p>
+          <a href="https://cal.com/ionisai/discovery" class="btn-primary">Book a Call</a>
+        </div>
+
+        <!-- Author card -->
+        <div class="sidebar-card">
+          <h4>Written by</h4>
+          <div class="author-card">
+            <div class="author-avatar" aria-hidden="true">J</div>
+            <div class="author-info">
+              <strong>Josh Hellicar</strong>
+              <span>Founder, Ionis AI</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="/" class="logo footer-logo" aria-label="Ionis AI — home">IONIS AI</a>
+        <p class="footer-tagline">Ionis AI is a UK-based AI automation agency helping B2B businesses worldwide generate more leads and run leaner operations.</p>
+        <address class="footer-address">
+          London, UK<br>
+          <a href="mailto:josh@ionisai.com">josh@ionisai.com</a>
+        </address>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/cold-email-outreach/">Cold Email Outreach</a></li>
+            <li><a href="/services/inbound-lead-qualification/">Inbound Lead Qualification</a></li>
+            <li><a href="/services/crm-automation/">CRM Automation</a></li>
+            <li><a href="/services/business-process-automation/">Business Process Automation</a></li>
+            <li><a href="/services/website-design/">Website Design and Build</a></li>
+            <li><a href="/services/bespoke-automation/">Bespoke AI Automation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="mailto:josh@ionisai.com">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ionis AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var navLinks = document.getElementById('nav-links');
+      if (!toggle || !navLinks) return;
+
+      // Mobile Services dropdown toggle
+      navLinks.querySelectorAll('.nav-dropdown > a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            var parent = this.closest('.nav-dropdown');
+            parent.classList.toggle('open');
+          }
+        });
+      });
+
+      toggle.addEventListener('click', function () {
+        var isOpen = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!isOpen));
+        navLinks.classList.toggle('open', !isOpen);
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          toggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('open');
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('nav')) {
+          toggle.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('open');
+        }
+      });
+    }());
+  </script>
+
+</body>
+</html>
